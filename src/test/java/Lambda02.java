@@ -32,10 +32,10 @@ public class Lambda02 {
     public static void ciftSayilariCarp(List<Integer> sayilar) {
 
         System.out.println("\nListedeki tum cift sayilarin carpimi");
-        System.out.println("carpim sonucu= " +
+        System.out.println("carpim sonucu = " +
                 sayilar.stream().filter(Lambda01::ciftMi).reduce(Math::multiplyExact));
 
-        System.out.println(sayilar.stream().filter(Lambda01::ciftMi).reduce(1,(a,b) -> (a*b)));
+        System.out.println("function olarak = " + sayilar.stream().filter(Lambda01::ciftMi).reduce(1,(a,b) -> (a*b)));
     }
 
     public static void butunToplam(List<Integer> sayilar) {
