@@ -27,6 +27,25 @@ public class Lambda02 {
         //Listedeki cift sayilarin carpimini yaz
         ciftSayilariCarp(sayilar);
 
+        //Listedeki min sayi
+        minSayiyiBul(sayilar);
+
+    }
+
+    public static void minSayiyiBul(List<Integer> sayilar) {
+
+        System.out.println("\nListedeki min eleman");
+
+        //integer class'ini kullanarak
+        System.out.println(sayilar.stream().reduce(Integer::min));
+
+        //Math class'ini kullanarak
+        System.out.println(sayilar.stream().reduce(Math::min));
+
+        //Lambda Expression ile cozum
+        int minSayiLambda = sayilar.stream().reduce(Integer.MAX_VALUE, (x,y) -> x<y ? x : y);
+
+
     }
 
     public static void ciftSayilariCarp(List<Integer> sayilar) {
